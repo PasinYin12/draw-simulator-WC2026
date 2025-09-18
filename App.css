@@ -5,6 +5,21 @@
   text-align: center;
 }
 
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;              /* ensures body fills the viewport */
+  background-image: url("./assets/sanfrancisco.jpg");
+  background-repeat: no-repeat;   /* prevent tiling */
+  background-size: cover;         /* ✅ scales to cover entire page */
+  background-position: center;    /* center the image */
+  background-attachment: fixed;
+}
+
+h1 {
+  font-size: 3rem;
+  color: #eeecec;
+}
 .logo {
   height: 6em;
   padding: 1.5em;
