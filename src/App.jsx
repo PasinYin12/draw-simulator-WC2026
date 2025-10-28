@@ -116,12 +116,15 @@ function App() {
         </>
       )}
       <div className="closing">
-      <p>Developed by LongDevDo | 2026 World Cup Draw Simulation</p>
-      <p>Full version will coming after International Break in November 2025</p>
+        <p className="line">Developed by LongDevDo | 2026 World Cup Draw Simulation</p>
+        <p className="line">Full version will coming after International Break in November 2025</p>
       </div>
+
+
+
     </div>
 
-    
+
   );
 }
 
