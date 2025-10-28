@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import WC26theme from './assets/WC26theme.jpeg'; 
 
 const CountdownTimer = () => {
     const [timeLeft, setTimeLeft] = useState({
@@ -34,29 +35,29 @@ const CountdownTimer = () => {
         return () => clearInterval(timer);
     }, []);
 
-    const styles = {
+      const styles = {
         container: {
             textAlign: 'center',
             margin: '1rem auto',
             padding: '1.5rem 1rem',
-            background: 'linear-gradient(135deg, #00CBA6 0%, #0099D6 25%, #FF6B00 50%, #FF0080 75%, #FF6B00 100%)',
+            backgroundImage: `url(${WC26theme})`,
+            backgroundSize: 'cover',           // Changed: Makes image cover the container
+            backgroundPosition: 'center',      // Added: Centers the image
+            backgroundRepeat: 'no-repeat',     // Added: Prevents image repetition
             borderRadius: '15px',
             boxShadow: '0 10px 30px rgba(0, 0, 0, 0.3)',
             maxWidth: '500px',
             position: 'relative',
-            overflow: 'hidden',
-            animation: 'gradient 15s ease infinite',
-            backgroundSize: '400% 400%'
+            overflow: 'hidden'
         },
         innerContainer: {
             background: 'rgba(0, 0, 0, 0.3)',
             borderRadius: '10px',
             padding: '1rem',
-            backdropFilter: 'blur(5px)'
         },
         title: {
             color: 'white',
-            fontSize: '1.2rem',
+            fontSize: '1.5rem',
             marginBottom: '0.25rem',
             fontWeight: '700',
             textTransform: 'uppercase',
@@ -65,7 +66,7 @@ const CountdownTimer = () => {
         },
         subtitle: {
             color: '#00CBA6',
-            fontSize: '0.85rem',
+            fontSize: '1rem',
             marginBottom: '1rem',
             fontWeight: '600',
             textShadow: '1px 1px 3px rgba(0, 0, 0, 0.5)',
@@ -130,8 +131,7 @@ const CountdownTimer = () => {
     return (
         <div style={styles.container}>
             <div style={styles.innerContainer}>
-                <h2 style={styles.title}>FIFA World Cup 2026™</h2>
-                <h3 style={styles.subtitle}>DRAW COUNTDOWN</h3>
+                <h2 style={styles.title}>Official draw will be held in...</h2>
                 <div style={styles.timer}>
                     <div 
                         style={styles.timeUnit}
@@ -191,7 +191,7 @@ const CountdownTimer = () => {
                     </div>
                 </div>
                 <p style={styles.date}>
-                    December 5, 2025 • 12:00 PM EST • <span style={styles.location}>Washington, D.C.</span>
+                    December 5, 2025 • 12:00 PM ET • <span style={styles.location}>Washington, D.C.</span>
                 </p>
             </div>
         </div>
