@@ -651,3 +651,20 @@ body::before {
   color: #888;
   font-size: 0.9rem;
 }
+
+.closing .line {
+  white-space: nowrap;   
+  margin: 0.25rem 0;
+}
+/* 📱 Responsive font scaling */
+@media (max-width: 600px) {
+  .closing {
+    font-size: 0.75rem;  /* shrink text on small screens */
+  }
+}
+
+@media (max-width: 400px) {
+  .closing {
+    font-size: 0.65rem;  /* shrink further on very small screens */
+  }
+}
